@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa dos Caracteres - Analisi Corporea Professionale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>🧠 Mapa dos Caracteres</h1>
+                <p class="subtitle">Analisi Corporea Professionale - Metodo dei 5 Tratti</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Sezione Input -->
+            <section class="input-section" id="inputSection">
+                <div class="card">
+                    <h2>📋 Dati del Cliente</h2>
+                    <div class="form-group">
+                        <label for="clientName">Nome del Cliente *</label>
+                        <input type="text" id="clientName" placeholder="Es: Marco Rossi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="analysisDate">Data Analisi</label>
+                        <input type="date" id="analysisDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="analystName">Nome Analista</label>
+                        <input type="text" id="analystName" placeholder="Il tuo nome">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>🔍 Punteggio per Zona Corporea</h2>
+                    <p class="instruction">Per ogni zona, distribuisci <strong>10 punti totali</strong> tra i 5 tratti. Il totale di ogni riga deve essere esattamente 10.</p>
+                    
+                    <div class="scoring-table">
+                        <table id="scoringTable">
+                            <thead>
+                                <tr>
+                                    <th>Zona Corporea</th>
+                                    <th class="trait-col esquizoide">Schizoide (E)</th>
+                                    <th class="trait-col oral">Orale (O)</th>
+                                    <th class="trait-col psicopata">Psicopatico (P)</th>
+                                    <th class="trait-col masoquista">Masochista (M)</th>
+                                    <th class="trait-col rigido">Rigido (R)</th>
+                                    <th class="total-col">Totale</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-zone="testa">
+                                    <td class="zone-name">1. Testa</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr data-zone="occhi">
+                                    <td class="zone-name">2. Occhi</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr data-zone="bocca">
+                                    <td class="zone-name">3. Bocca</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr data-zone="tronco">
+                                    <td class="zone-name">4. Tronco</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr data-zone="bacino">
+                                    <td class="zone-name">5. Bacino</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr data-zone="gambe">
+                                    <td class="zone-name">6. Gambe</td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="M"></td>
+                                    <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="R"></td>
+                                    <td class="row-total">0</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td><strong>TOTALE PUNTI</strong></td>
+                                    <td class="col-total" id="totalE">0</td>
+                                    <td class="col-total" id="totalO">0</td>
+                                    <td class="col-total" id="totalP">0</td>
+                                    <td class="col-total" id="totalM">0</td>
+                                    <td class="col-total" id="totalR">0</td>
+                                    <td class="grand-total" id="grandTotal">0/60</td>
+                                </tr>
+                                <tr class="percentage-row">
+                                    <td><strong>PERCENTUALE</strong></td>
+                                    <td class="col-percentage" id="percentE">0%</td>
+                                    <td class="col-percentage" id="percentO">0%</td>
+                                    <td class="col-percentage" id="percentP">0%</td>
+                                    <td class="col-percentage" id="percentM">0%</td>
+                                    <td class="col-percentage" id="percentR">0%</td>
+                                    <td><strong>100%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="validation-message" id="validationMessage"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="generateBtn" onclick="generateReport()">
+                        📊 Genera Report Completo
+                    </button>
+                    <button class="btn btn-secondary" id="resetBtn" onclick="resetForm()">
+                        🔄 Reset
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sezione Report (nascosta inizialmente) -->
+            <section class="report-section" id="reportSection" style="display: none;">
+                <div class="report-header">
+                    <button class="btn btn-back" onclick="backToInput()">← Torna all'Input</button>
+                    <button class="btn btn-print" onclick="printReport()">🖨️ Stampa Report</button>
+                    <button class="btn btn-download" onclick="downloadPDF()">📄 Scarica PDF</button>
+                </div>
+                
+                <div id="reportContent" class="report-content">
+                    <!-- Il report verrà generato dinamicamente qui -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Mapa dos Caracteres - Metodo Sawubona | Basato su Reich & Lowen</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

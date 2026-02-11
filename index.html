@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa dos Caracteres - Analisi Corporea Professionale</title>
+    <title>Mapa dos Caracteres - Profiling Caratteriale</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <h1>🧠 Mapa dos Caracteres</h1>
-                <p class="subtitle">Analisi Corporea Professionale - Metodo dei 5 Tratti</p>
+            <div class="header-top">
+                <div class="logo">
+                    <h1>🧠 Mapa dos Caracteres</h1>
+                    <p class="subtitle" data-i18n="subtitle"></p>
+                </div>
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="it" title="Italiano">🇮🇹 IT</button>
+                    <button class="lang-btn" data-lang="pt-BR" title="Português (Brasil)">🇧🇷 PT</button>
+                    <button class="lang-btn" data-lang="en" title="English">🇺🇸 EN</button>
+                </div>
             </div>
         </header>
 
@@ -19,41 +26,41 @@
             <!-- Sezione Input -->
             <section class="input-section" id="inputSection">
                 <div class="card">
-                    <h2>📋 Dati del Cliente</h2>
+                    <h2 data-i18n="client_data">Dati del Cliente</h2>
                     <div class="form-group">
-                        <label for="clientName">Nome del Cliente *</label>
-                        <input type="text" id="clientName" placeholder="Es: Marco Rossi" required>
+                        <label for="clientName" data-i18n="client_name">Nome del Cliente *</label>
+                        <input type="text" id="clientName" data-i18n-placeholder="client_name_placeholder" placeholder="Es: Marco Rossi" required>
                     </div>
                     <div class="form-group">
-                        <label for="analysisDate">Data Analisi</label>
+                        <label for="analysisDate" data-i18n="analysis_date">Data Analisi</label>
                         <input type="date" id="analysisDate" required>
                     </div>
                     <div class="form-group">
-                        <label for="analystName">Nome Analista</label>
-                        <input type="text" id="analystName" placeholder="Il tuo nome">
+                        <label for="analystName" data-i18n="analyst_name">Nome Analista</label>
+                        <input type="text" id="analystName" data-i18n-placeholder="analyst_name_placeholder" placeholder="Il tuo nome">
                     </div>
                 </div>
 
                 <div class="card">
-                    <h2>🔍 Punteggio per Zona Corporea</h2>
-                    <p class="instruction">Per ogni zona, distribuisci <strong>10 punti totali</strong> tra i 5 tratti. Il totale di ogni riga deve essere esattamente 10.</p>
+                    <h2 data-i18n="trait_scores">Punteggio per Zona Corporea</h2>
+                    <p class="instruction" data-i18n="instruction"></p>
                     
                     <div class="scoring-table">
                         <table id="scoringTable">
                             <thead>
                                 <tr>
-                                    <th>Zona Corporea</th>
-                                    <th class="trait-col esquizoide">Schizoide (E)</th>
-                                    <th class="trait-col oral">Orale (O)</th>
-                                    <th class="trait-col psicopata">Psicopatico (P)</th>
-                                    <th class="trait-col masoquista">Masochista (M)</th>
-                                    <th class="trait-col rigido">Rigido (R)</th>
-                                    <th class="total-col">Totale</th>
+                                    <th data-i18n="body_zone">Zona Corporea</th>
+                                    <th class="trait-col esquizoide"><span data-i18n="trait_e">Schizoide</span> (E)</th>
+                                    <th class="trait-col oral"><span data-i18n="trait_o">Orale</span> (O)</th>
+                                    <th class="trait-col psicopata"><span data-i18n="trait_p">Psicopatico</span> (P)</th>
+                                    <th class="trait-col masoquista"><span data-i18n="trait_m">Masochista</span> (M)</th>
+                                    <th class="trait-col rigido"><span data-i18n="trait_r">Rigido</span> (R)</th>
+                                    <th class="total-col" data-i18n="total">Totale</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr data-zone="testa">
-                                    <td class="zone-name">1. Testa</td>
+                                    <td class="zone-name" data-i18n="head">1. Testa</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -62,7 +69,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr data-zone="occhi">
-                                    <td class="zone-name">2. Occhi</td>
+                                    <td class="zone-name" data-i18n="eyes">2. Occhi</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -71,7 +78,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr data-zone="bocca">
-                                    <td class="zone-name">3. Bocca</td>
+                                    <td class="zone-name" data-i18n="mouth">3. Bocca</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -80,7 +87,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr data-zone="tronco">
-                                    <td class="zone-name">4. Tronco</td>
+                                    <td class="zone-name" data-i18n="torso">4. Tronco</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -89,7 +96,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr data-zone="bacino">
-                                    <td class="zone-name">5. Bacino</td>
+                                    <td class="zone-name" data-i18n="pelvis">5. Bacino</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -98,7 +105,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr data-zone="gambe">
-                                    <td class="zone-name">6. Gambe</td>
+                                    <td class="zone-name" data-i18n="legs">6. Gambe</td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="E"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="O"></td>
                                     <td><input type="number" min="0" max="10" value="0" class="score-input" data-trait="P"></td>
@@ -107,7 +114,7 @@
                                     <td class="row-total">0</td>
                                 </tr>
                                 <tr class="total-row">
-                                    <td><strong>TOTALE PUNTI</strong></td>
+                                    <td><strong data-i18n="total_points">TOTALE PUNTI</strong></td>
                                     <td class="col-total" id="totalE">0</td>
                                     <td class="col-total" id="totalO">0</td>
                                     <td class="col-total" id="totalP">0</td>
@@ -116,7 +123,7 @@
                                     <td class="grand-total" id="grandTotal">0/60</td>
                                 </tr>
                                 <tr class="percentage-row">
-                                    <td><strong>PERCENTUALE</strong></td>
+                                    <td><strong data-i18n="percentage">PERCENTUALE</strong></td>
                                     <td class="col-percentage" id="percentE">0%</td>
                                     <td class="col-percentage" id="percentO">0%</td>
                                     <td class="col-percentage" id="percentP">0%</td>
@@ -132,10 +139,10 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button class="btn btn-primary" id="generateBtn" onclick="generateReport()">
+                    <button class="btn btn-primary" id="generateBtn" onclick="generateReport()" data-i18n="generate_report">
                         📊 Genera Report Completo
                     </button>
-                    <button class="btn btn-secondary" id="resetBtn" onclick="resetForm()">
+                    <button class="btn btn-secondary" id="resetBtn" onclick="resetForm()" data-i18n="reset">
                         🔄 Reset
                     </button>
                 </div>
@@ -144,9 +151,9 @@
             <!-- Sezione Report (nascosta inizialmente) -->
             <section class="report-section" id="reportSection" style="display: none;">
                 <div class="report-header">
-                    <button class="btn btn-back" onclick="backToInput()">← Torna all'Input</button>
-                    <button class="btn btn-print" onclick="printReport()">🖨️ Stampa Report</button>
-                    <button class="btn btn-download" onclick="downloadPDF()">📄 Scarica PDF</button>
+                    <button class="btn btn-back" onclick="backToInput()" data-i18n="back_to_input">← Torna all'Input</button>
+                    <button class="btn btn-print" onclick="printReport()" data-i18n="print_report">🖨️ Stampa Report</button>
+                    <button class="btn btn-download" onclick="downloadPDF()" data-i18n="download_pdf">📄 Scarica PDF</button>
                 </div>
                 
                 <div id="reportContent" class="report-content">
@@ -156,10 +163,11 @@
         </main>
 
         <footer>
-            <p>© 2026 Mapa dos Caracteres - Metodo Sawubona | Basato su Reich & Lowen</p>
+            <p data-i18n="footer">© 2026 Mapa dos Caracteres - Metodo Sawubona | Basato su Reich & Lowen</p>
         </footer>
     </div>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
